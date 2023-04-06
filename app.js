@@ -8,14 +8,12 @@ const orderRouter = require('./routes/order');
 const positionRouter = require('./routes/position');
 const app = express();
 
-
 db.connect((err) => {
     if (err) {
         console.error(err.message);
     } else {
         console.log('Mysql connected');
     }
-
 })
 
 app.use(require('morgan')('dev'))
